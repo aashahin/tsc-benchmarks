@@ -6,6 +6,8 @@
 
 **tsgo was faster when reusing its cache for unchanged code or a leaf-function edit.** Bun was faster after a shared-interface edit.
 
+**Bun used 32–66% less peak memory in full checks.** For cached checks, tsgo used about 5% less with unchanged code and 1% less after a leaf edit; Bun used 22% less after the shared-interface edit.
+
 Here, **tsgo** means Microsoft's Go-based native TypeScript **7.0.2** compiler. Its released command is named `tsc`; it is not the older JavaScript compiler. The Bun version tested was **1.4.3-canary.1 (`620b50f6a`)**.
 
 ### Full check: both compilers check everything
@@ -34,6 +36,21 @@ Times are medians of seven measured runs per compiler, after two warmup pairs. *
 
 See the [84 individual samples](benchmarks/2026-10-08-laptop/samples.csv) and [full statistics](benchmarks/2026-10-08-laptop/summary.json).
 
+### Memory: Bun uses less in full checks
+
+Median peak resident memory (RSS) across seven measured runs per compiler; lower is better. This measures each compiler process’s peak RAM use during a check. It excludes setup and the on-disk incremental cache.
+
+| Workload / scenario | Bun | tsgo | Result |
+|---|---:|---:|---|
+| Zod objects / full check | 237.5 MiB | 494.9 MiB | **Bun uses 52% less** |
+| Zod chains / full check | 135.2 MiB | 399.5 MiB | **Bun uses 66% less** |
+| Generated project / full check | 85.5 MiB | 125.8 MiB | **Bun uses 32% less** |
+| Generated project / unchanged | 86.1 MiB | 81.6 MiB | tsgo uses 5% less |
+| Generated project / leaf edit | 85.1 MiB | 84.5 MiB | Nearly equal: tsgo uses 1% less |
+| Generated project / shared-interface edit | 84.0 MiB | 108.3 MiB | **Bun uses 22% less** |
+
+Percentages compare the unrounded medians. The leaf-edit difference is only about 0.6 MiB, smaller than the observed run-to-run memory variation.
+
 ## What was actually benchmarked
 
 This Bun build reports TypeScript 7.0.2 as its compatibility version.
@@ -50,25 +67,9 @@ The generated project was tested four ways: a full check, an unchanged repeat ch
 
 **Application results are still missing.** VS Code, Sentry, Playwright, Excalidraw, TypeORM, and tRPC could not be downloaded because the execution environment blocked network access. Their setup recipes are included, but this README makes no performance claim about them.
 
-## Test conditions and memory
+## Test conditions
 
 Recorded on **October 8, 2026**, on Linux with an Intel Core i7-6820HQ. Both compilers used **two logical CPUs on one physical core**, low CPU/I/O priority, and a 6 GiB soft memory watchdog. Other work was running on the laptop.
-
-<details>
-<summary>Peak memory for the same measurements</summary>
-
-Median of the per-process peak resident memory; lower is better.
-
-| Workload / scenario | Bun | tsgo |
-|---|---:|---:|
-| Zod objects / full check | 237 MiB | 495 MiB |
-| Zod chains / full check | 135 MiB | 399 MiB |
-| Generated project / full check | 86 MiB | 126 MiB |
-| Generated project / unchanged | 86 MiB | 82 MiB |
-| Generated project / leaf edit | 85 MiB | 84 MiB |
-| Generated project / shared-interface edit | 84 MiB | 108 MiB |
-
-</details>
 
 ## Data and excluded workloads
 
