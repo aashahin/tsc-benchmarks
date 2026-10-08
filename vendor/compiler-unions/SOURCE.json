@@ -1,0 +1,163 @@
+{
+  "repository": "https://github.com/microsoft/typescript-benchmarking",
+  "commit": "41f652ab2df5077b1115f73eaeefc2fe9f674132",
+  "source_directory": "cases/solutions/Compiler-Unions",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob_sha1": "9e841e7a26e4eb057b24511e7b92d42b257a80e5"
+    },
+    {
+      "path": "binder.ts",
+      "git_blob_sha1": "4b13e52c9b7a719050f0291f1bc5672552cea753"
+    },
+    {
+      "path": "checker.ts",
+      "git_blob_sha1": "53b78fe5f2a6377b25acaf825933046080e02b71"
+    },
+    {
+      "path": "commandLineParser.ts",
+      "git_blob_sha1": "c92d147f9a93ad9fa0a68bbda5dd7abcf32b26fa"
+    },
+    {
+      "path": "comments.ts",
+      "git_blob_sha1": "025a4f36d26be87ba591baeab16f9d9a3c2a0696"
+    },
+    {
+      "path": "core.ts",
+      "git_blob_sha1": "6ddfff1023c713ecd2270197d09fe14232f42a4f"
+    },
+    {
+      "path": "declarationEmitter.ts",
+      "git_blob_sha1": "c433d3d79a1583c78027981ba68fcf41e779f03f"
+    },
+    {
+      "path": "diagnosticInformationMap.generated.ts",
+      "git_blob_sha1": "dfadd9aa1a730ea11f195e6c377e1cbeb2db1548"
+    },
+    {
+      "path": "diagnosticMessages.generated.json",
+      "git_blob_sha1": "2f01dfaca147bdeee466e8238f33f3768f319cb5"
+    },
+    {
+      "path": "diagnosticMessages.json",
+      "git_blob_sha1": "9a3492e5c377aa03fa9c6542eb55073760cf1d4d"
+    },
+    {
+      "path": "emitter.ts",
+      "git_blob_sha1": "5444c618353bd05918388049f282cf3213ced6c6"
+    },
+    {
+      "path": "factory.ts",
+      "git_blob_sha1": "43514eed1560373066d396ef17eadeb8fc730443"
+    },
+    {
+      "path": "moduleNameResolver.ts",
+      "git_blob_sha1": "5fdac5048966d76f587ee7d08842cd6867543ee7"
+    },
+    {
+      "path": "parser.ts",
+      "git_blob_sha1": "41a6d66e3477314d5d5c2565cfad27c4471977f9"
+    },
+    {
+      "path": "performance.ts",
+      "git_blob_sha1": "8c24b3b9f1be5385f3d66c11affecd1f8feabd86"
+    },
+    {
+      "path": "program.ts",
+      "git_blob_sha1": "ec220ad248eda6cdc9390ff11982eba33075ddf3"
+    },
+    {
+      "path": "scanner.ts",
+      "git_blob_sha1": "a130d8427daad08907bd629e89fe91669a0f2feb"
+    },
+    {
+      "path": "sourcemap.ts",
+      "git_blob_sha1": "b5cd1d9e32239222e1c08a700aea1e73eb6b6610"
+    },
+    {
+      "path": "symbolWalker.ts",
+      "git_blob_sha1": "e20ef9f9d987702b51dfb7df6eea093f99486d79"
+    },
+    {
+      "path": "sys.ts",
+      "git_blob_sha1": "8a4c4ad22cc5ba486b82d87797427f617e1a0fac"
+    },
+    {
+      "path": "transformer.ts",
+      "git_blob_sha1": "5b620c3283863ada2700fb76b5c8bdfb091395a5"
+    },
+    {
+      "path": "transformers/destructuring.ts",
+      "git_blob_sha1": "0fea3e41c87606606c555d62b6c1606d3ad4adf7"
+    },
+    {
+      "path": "transformers/es2015.ts",
+      "git_blob_sha1": "443a0ef269231cc5288ecdd24b81173a056c91ef"
+    },
+    {
+      "path": "transformers/es2016.ts",
+      "git_blob_sha1": "a94689917762186767cfb3734255a854c41e7248"
+    },
+    {
+      "path": "transformers/es2017.ts",
+      "git_blob_sha1": "43058358ee5f7d6708d80795c824d7a6d7921042"
+    },
+    {
+      "path": "transformers/es5.ts",
+      "git_blob_sha1": "290c9ae77c847a7914609a93382ce96c608f503e"
+    },
+    {
+      "path": "transformers/esnext.ts",
+      "git_blob_sha1": "3bdcc9e9ee72207366e03884b0b7f94ab8742c08"
+    },
+    {
+      "path": "transformers/generators.ts",
+      "git_blob_sha1": "20195adeef47b823e3bb9cb9377e5ff2db924659"
+    },
+    {
+      "path": "transformers/jsx.ts",
+      "git_blob_sha1": "0d00f4d48a343d28023c5fcf817937cd90576e0f"
+    },
+    {
+      "path": "transformers/module/es2015.ts",
+      "git_blob_sha1": "3951d08109da72b76be2cb72c85dcd17833a3c42"
+    },
+    {
+      "path": "transformers/module/module.ts",
+      "git_blob_sha1": "1d4f50d20d5adcc7d18c71b4530942ef9a817c1b"
+    },
+    {
+      "path": "transformers/module/system.ts",
+      "git_blob_sha1": "e1c239736d5128bf8ee9dd8baf360a7f12bccb39"
+    },
+    {
+      "path": "transformers/ts.ts",
+      "git_blob_sha1": "692c758bc7504c563d74c7c81ee2173a7ffeaf84"
+    },
+    {
+      "path": "transformers/utilities.ts",
+      "git_blob_sha1": "f641ee49faf676db142ea62001ae61b7f614ad47"
+    },
+    {
+      "path": "tsc.ts",
+      "git_blob_sha1": "d5e584c7ac5617ed737dfab92f658df03cda51db"
+    },
+    {
+      "path": "tsconfig.json",
+      "git_blob_sha1": "00752ee6678d1ca4b80f4bee77ec3b857a58ba2c"
+    },
+    {
+      "path": "types.ts",
+      "git_blob_sha1": "57e050e839278a3c377dc070dd013affdb83c9d5"
+    },
+    {
+      "path": "utilities.ts",
+      "git_blob_sha1": "fecbafa0a612f06198891960ede221caccd8db1c"
+    },
+    {
+      "path": "visitor.ts",
+      "git_blob_sha1": "6430d66903ea94e2f72fbba3cc71f2ec4511f2d6"
+    }
+  ]
+}

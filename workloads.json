@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recipe_source": "https://github.com/pingdotgg/ts-rust/tree/main/scripts/bench-apps",
+  "zod_version": "4.4.3",
+  "workloads": [
+    {"id":"vscode", "kind":"repository", "category":"real-project", "repository":"https://github.com/microsoft/vscode", "commit":"3f07e1aba32acacb8b08ae91bfdc954b580ad1fd", "config":"src/tsconfig.json", "adapter":"vscode", "license":"MIT"},
+    {"id":"sentry", "kind":"repository", "category":"real-project", "repository":"https://github.com/getsentry/sentry", "commit":"8294650589dbd26f230c73f4ab26b62a68aede8f", "config":"tsconfig.json", "adapter":"plain", "license":"See pinned repository LICENSE (source-available)"},
+    {"id":"playwright", "kind":"repository", "category":"real-project", "repository":"https://github.com/microsoft/playwright", "commit":"d469960fdfc461e2d5795a3fa48a58a52a91ecaf", "config":"tsconfig.json", "adapter":"playwright", "license":"Apache-2.0"},
+    {"id":"excalidraw", "kind":"repository", "category":"real-project", "repository":"https://github.com/excalidraw/excalidraw", "commit":"53973c3a423fbd75a4ce68107786b4fcb90e4968", "config":"tsconfig.json", "adapter":"excalidraw", "license":"MIT"},
+    {"id":"typeorm", "kind":"repository", "category":"real-project", "repository":"https://github.com/typeorm/typeorm", "commit":"c64a1f052fc39f6688b6b73b83d065d7147ba8bb", "config":"packages/typeorm/tsconfig.json", "adapter":"typeorm", "license":"MIT"},
+    {"id":"trpc-server", "kind":"repository", "category":"real-project", "repository":"https://github.com/trpc/trpc", "commit":"d756e591a5e37ef20b8d75ecd4d736c195497289", "config":"packages/server/tsconfig.json", "adapter":"plain", "license":"MIT"},
+    {"id":"compiler-unions", "kind":"vendored", "category":"stress", "vendor":"compiler-unions", "config":"tsconfig.json"},
+    {"id":"zod-objects", "kind":"zod", "category":"stress", "config":"tsconfig.json", "generator":"objects", "schemas":2000, "keys":16},
+    {"id":"zod-chains", "kind":"zod", "category":"stress", "config":"tsconfig.json", "generator":"chains", "chains":128, "depth":25, "keys":12},
+    {"id":"edit-graph", "kind":"generated", "category":"workflow", "config":"tsconfig.json", "modules":1000},
+    {"id":"smoke-valid", "kind":"generated", "category":"smoke", "config":"tsconfig.json"},
+    {"id":"smoke-errors", "kind":"generated", "category":"smoke", "config":"tsconfig.json", "expected_diagnostic_codes":[2304,2322]},
+    {"id":"smoke-references", "kind":"generated", "category":"smoke", "config":"tsconfig.json", "references":true}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/colinhacks/zod",
+  "commit": "0b216ef674e297ebe41d8bf902262e56f8755822",
+  "files": [
+    {"path":"generate.ts", "upstream_path":"packages/tsc/generate.ts", "git_blob_sha1":"b9476fe1b4c363f6d1efbe3af76728c28c0ee2f9"},
+    {"path":"LICENSE", "upstream_path":"LICENSE", "git_blob_sha1":"c06579627b432d09779094cd0166b7f37fe51db8"}
+  ]
+}

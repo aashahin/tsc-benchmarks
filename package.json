@@ -1,0 +1,16 @@
+{
+  "name": "tsc-benchmarks",
+  "private": true,
+  "devDependencies": {
+    "@types/node": "26.6.4"
+  },
+  "scripts": {
+    "doctor": "python3 bench.py doctor",
+    "prepare": "python3 bench.py prepare",
+    "validate": "python3 bench.py validate",
+    "bench": "python3 bench.py run",
+    "report": "python3 bench.py report",
+    "test": "python3 -m unittest discover -s tests -v",
+    "typecheck": "bun check -p tsconfig.json --threads 2"
+  }
+}
